@@ -1,29 +1,115 @@
 First download the git cli
 
-Install the vs code
+Application url:
+[HSimpleFlaskApp]()
 
-Clone the github repository using git bash
+## To Start Machine Learning project follow the below steps.
 
-Create a virtual environment in VS Code
+### Software and account Requirement.
 
-Activate the Virtual Environment
+1. [Github Account] 
+2. [Heroku Account]
+3. [VS Code IDE]
+4. [GIT cli]
+5. [GIT Documentation]
+6. [IpynKernel]
+7. [Anaconda]
+8. [Docker]
 
-Install required libraries using pip install 
+Create conda virtual environment
+```
+conda create -p venv python==3.11.5 -y
+```
+```
+conda activate venv/
+```
+Install the necessary packages and libraries 
 
-Run the application
+```
+pip install -r requirements.txt
+```
 
-Check and Install docker on system
+Adding files to git
+```
+git add .
+```
 
-Build docker Images
+OR
+```
+git add <file_name>
+```
 
-List docker images and note down ImageID
 
-Run Docker Image
+To check the git status 
+```
+git status
+```
+To check all version maintained by git
+```
+git log
+```
 
-Check running containers and note down container ID
+To create version/commit all changes by git
+```
+git commit -m "message"
+```
 
-Stop docker containers
+To send version/changes to github
+```
+git push origin main
+```
 
-Add github Folder, add workflows folder inside github folder
+To check remote url 
+```
+git remote -v
+```
 
-Create yaml file and add code inside it.
+To setup CI/CD pipeline in heroku the following 3 information is needed
+
+1. HEROKU_EMAIL 
+2. HEROKU_API_KEY 
+3. HEROKU_APP_NAME 
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tagname> .
+```
+> Note: Image name for docker must be lowercase
+
+
+To list docker image
+```
+docker images
+```
+
+Run docker image
+```
+docker run -p 5000:5000 -e PORT=5000 f8c749e73678
+```
+
+To check running container in docker
+```
+docker ps
+```
+
+Tos stop docker conatiner
+```
+docker stop <container_id>
+```
+
+
+
+```
+python setup.py install
+```
+
+
+Install ipykernel
+
+```
+pip install ipykernel
+```
+
+
+Data Drift:
+When your datset stats gets change we call it as data drift
